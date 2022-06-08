@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundary);
+}
+
+.login-panel {
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.login-header {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.login-header > .header-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.login-header > .header-subtitle {
+    color: var(--text-light);
+}
+
+.login-header > *, form > * {
+    display: block;
+}
+
+form {
+    margin: 20px 0 30px 0;
+}
+
+form > input {
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+form > input[type="text"], form > input[type="password"] {
+    margin-bottom: 20px;
+    border: 1px solid gainsboro;
+    font-size: 0.9rem;
+}
+
+form > input[type="text"]:focus, form > input[type="password"]:focus {
+    border-color: var(--acent);
+}
+
+form label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+form a {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    float: right;
+    color: black;
+    color: var(--acent);
+}
+
+form > a:hover {
+    text-decoration: underline;
+}
+
+form > input[type="submit"] {
+    color: white;
+    background-color: var(--acent);
+    border: none;
+    cursor: pointer;
+}
