@@ -15,28 +15,37 @@
     --secundary: rgb(218, 66, 10);
     --acent: rgb(77, 13, 205);
 }
-html{
-    width: 100%;
-    height: 100%;
-}
+
 body {
-    min-height: 100%;
+    height: 100vh;
+    min-height: 100vh;
 }
+
+#root {
+    display: flex;
+    height: 100%;
+    background-color: var(--secundary);
+    flex-direction: column;
+}
+
 nav {
     background: var(--primary);
-    height: 10%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 5px 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-#root {
+
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--secundary);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
 }
