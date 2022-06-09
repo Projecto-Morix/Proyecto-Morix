@@ -1,15 +1,13 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secundary);
-}
+
 
 .login-panel {
     background-color: var(--primary);
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    width: 45%;
+    height: 40%;
+    position: relative;
 }
 
 .login-header {
@@ -30,12 +28,17 @@ body {
 .login-header > *, form > * {
     display: block;
 }
-
+.Img {
+    border: 2px;
+    width: 40%;
+object-fit: cover;
+}
 form {
     margin: 20px 0 30px 0;
 }
 
 form > input {
+    
     width: 100%;
     padding: 7px;
     outline: none;

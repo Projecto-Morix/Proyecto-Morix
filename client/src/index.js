@@ -1,11 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './pages/normalize.css';
+import './css/normalize.css';
 import Login from './pages/Login';
-import './pages/login.css';
+import CatalogoE from './pages/CatalogoE';
+import NoPage from './pages/NoPage';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import SFooter from './pages/components/SFooter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login/>
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+        <br/>
+      </nav>
+      <Routes>
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/" element={<CatalogoE/>} />
+        <Route path="*" element={<NoPage/>}/>
+      </Routes>
+      <SFooter/>
+    </Router>
   </React.StrictMode>
 );

@@ -1,4 +1,5 @@
 import LoginC from './components/LoginC';
+import './../css/login.css';
 function Login() {
   return (
     <div class="login-panel">
