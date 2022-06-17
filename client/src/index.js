@@ -7,6 +7,7 @@ import NoPage from './pages/NoPage';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import SFooter from './pages/components/SFooter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const RenderApp= ()=>{
 root.render(
   <React.StrictMode>
     <Router>
@@ -24,3 +25,6 @@ root.render(
     </Router>
   </React.StrictMode>
 );
+}
+RenderApp();
+
