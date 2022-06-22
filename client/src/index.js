@@ -14,16 +14,13 @@ root.render(
   <React.StrictMode>
     <Router>
       <nav>
-<<<<<<< HEAD
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>
-=======
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul>
         <br/>
->>>>>>> refs/remotes/origin/main
       </nav>
       <Routes>
         <Route path="/Login" element={<Login/>} />
