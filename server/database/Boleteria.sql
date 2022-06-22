@@ -27,8 +27,6 @@ CREATE TABLE Eventos (
     Tipo VARCHAR(25),    
     ID_patroncinador INT,
     Locacion NVARCHAR(200),
-    Ciudad NVARCHAR(200),
-    Pais NVARCHAR(200),
     Fecha_Evento DATETIME,
     Edad_Min INT,
     Descripcion NVARCHAR(250),
