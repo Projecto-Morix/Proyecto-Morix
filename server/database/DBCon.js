@@ -1,4 +1,5 @@
 const Mysql = require('Mysql2');
+
 const Con = Mysql.createConnection({
     host: process.env.DbHost,
     user: process.env.DbUser,
@@ -6,4 +7,4 @@ const Con = Mysql.createConnection({
     database: 'Boleteria'
 });
 
-module.exports=Con;
+module.exports = Con;
