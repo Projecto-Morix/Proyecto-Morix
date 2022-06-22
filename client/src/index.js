@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/normalize.css';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Home from './pages/Home';
-import Catalog from './pages/Catalog'
 import NoPage from './pages/NoPage';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import SFooter from './pages/components/SFooter';
@@ -15,13 +15,21 @@ root.render(
     <Router>
       <nav>
         <Link to="/" className="nav-logo">Morix</Link>
-        <ul>
-          <li><Link to="/catalog">Catalogo</Link></li>
-          <li><Link to="/login">Login</Link></li>
-        </ul>
+        <div className='links'>
+          <ul>
+            <li><Link to="/login">Route1</Link></li>
+            <li><Link to="/login">Route2</Link></li>
+            <li><Link to="/login">Route3</Link></li>
+            <li><Link to="/login">Route4</Link></li>
+          </ul>
+          <ul>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/register">Register</Link></li>
+          </ul>
+        </div>
       </nav>
       <Routes>
-        <Route path="/Catalog" element={<Catalog/>} />
+        <Route path="/Register" element={<Register/>} />
         <Route path="/Login" element={<Login/>} />
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<NoPage/>}/>

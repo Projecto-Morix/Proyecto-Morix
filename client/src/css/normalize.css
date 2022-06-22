@@ -12,6 +12,7 @@
     font-size: 16px;
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 
 *:root {
@@ -36,6 +37,8 @@ body {
     height: 100%;
     background-color: var(--secundary);
     flex-direction: column;
+    min-height: 100%;
+    overflow-y: scroll;
 }
 
 nav {
@@ -53,14 +56,34 @@ nav {
     letter-spacing: .75px;
     font-size: 1.5rem;
     margin: 0 20px;
+    color: var(--secundary);
 }
 
-nav > ul > li {
+.nav-logo:focus {
+    color: var(--secundary);
+}
+
+nav > .links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+nav > .links > ul > li {
     display: inline-block;
     padding: 0 20px;
 }
 
-nav > ul > li > a {
+nav > .links ul > li > a {
+    color: white;
+}
+
+nav > .links > li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+nav > .sesion > li > a {
     color: white;
 }
 
@@ -72,6 +95,9 @@ footer {
     display: flex;
     justify-content: center;
     padding: 20px;
-    color: white;
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer > * {
+    color: white;
 }
