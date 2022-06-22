@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/normalize.css';
+import './css/Catalog.css';
+import './css/login.css';
 import Login from './pages/Login';
-import CatalogoE from './pages/CatalogoE';
+import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import SFooter from './pages/components/SFooter';
@@ -14,11 +16,10 @@ root.render(
       <nav>
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>
-        <br/>
       </nav>
       <Routes>
         <Route path="/Login" element={<Login/>} />
-        <Route path="/" element={<CatalogoE/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="*" element={<NoPage/>}/>
       </Routes>
       <SFooter/>

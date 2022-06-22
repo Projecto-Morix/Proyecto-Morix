@@ -27,20 +27,13 @@ CREATE TABLE Eventos (
     Tipo varchar(25),    
     ID_patroncinador INT,
     Locacion NVARCHAR(200),
-    Ciudad NVARCHAR(200),
-    Pais NVARCHAR(200),
     Fecha_Evento DATETIME,
     Edad_Min INT,
     Descripcion NVARCHAR(250),
     Imagenes JSON,
     CONSTRAINT FK_Eventos_Patrocinador FOREIGN KEY (ID_patroncinador) REFERENCES Patrocinadores(Id_Patrocinador)
 );
-insert into usuarios values 
-('Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com',null,'C:/C.jpg');
-Insert into Patrocinadores values (null, 1, '0001', 'Wachupita' );
-Insert into Eventos values (null, 'Party parillada','Pool Pary',1,'Wualey','SD','28/6/2022',15,'pila de romo', "[{
-Imagenes: ['h','d']
-}]");
+
 
 
 CREATE TABLE Categoria_Boletos (
@@ -62,6 +55,12 @@ CREATE TABLE Boletos (
     constraint FK_Boletos_Usuarios foreign key(ID_usuario) references Usuarios (ID_Usuario),
     CONSTRAINT FK_Bolotos_Categoria FOREIGN KEY (id_categoria) REFERENCES Categoria_Boletos(Id_categoria)
 );
+insert into usuarios values 
+('Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com',null,'C:/C.jpg');
+Insert into Patrocinadores values (null, 1, '0001', 'Wachupita' );
+Insert into Eventos values (null, 'Party parillada','Pool Pary',1,'Wualey','SD','28/6/2022',15,'pila de romo', "[{
+Imagenes: ['h','d']
+}]");
 /*
 CREATE TABLE Facturas (
 	id_factura INT PRIMARY KEY AUTO_INCREMENT,
