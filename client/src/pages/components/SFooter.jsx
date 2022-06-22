@@ -2,7 +2,7 @@ import React from 'react'
 
 function SFooter() {
   return (
-    <footer><p>Hecho Para morillo</p></footer>
+    <footer><p>Hecho para Morillo</p></footer>
   )
 }
 
