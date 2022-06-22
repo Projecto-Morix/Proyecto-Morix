@@ -1,7 +1,6 @@
 function LoginC() {
     return(
 <form action="" method="">
-    <img src="images/cod.jpg" alt="" class="Img"/>
     <label for="username">Usuario</label>
     <input type="text" id="username"/>
     <label for="password">Contraseña</label>
