@@ -1,5 +1,5 @@
 import React from 'react'
-import Catalog from './components/Catalog'
+import Catalog from './Catalog'
 const Home = () => {
   return (
     <div> 

@@ -1,16 +1,15 @@
 .login-panel {
     background-color: var(--primary);
-    padding: 20px;
+    padding: clamp(20px, 1vh, 50px) 20px;
     border-radius: 7px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
-    height: clamp(400px, 60vh, 550px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .login-header {
-    margin-top: clamp(20px, 8vh, 50px);
+    color: var(--text);
     margin-bottom: clamp(20px, 8vh, 50px);
     text-align: center;
 }
@@ -69,7 +68,6 @@ form > input[type="submit"] {
     background-color: var(--acent);
     border: none;
     cursor: pointer;
-    margin-bottom: clamp(20px, 8vh, 50px);
 }
 
 @media (max-width: 500px) {
