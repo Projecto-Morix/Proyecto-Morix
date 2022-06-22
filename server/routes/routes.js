@@ -1,4 +1,4 @@
-const  router = require("express").Router();
+const router = require("express").Router();
 const con = require('./../database/DBCon');
 
 router.get('/', (req, res)=>{
@@ -11,26 +11,10 @@ router.get('/', (req, res)=>{
     });
 });
 
-router.get('/catalog', (req, res) => {
+const catalog = require('./catalog.routes.js');
+router.use('/catalog', catalog);
 
-    con.query('SELECT * FROM Eventos', (err, result) => {
-
-        if (err) throw err;
-
-        res.send(result);
-    });
-});
-
-router.post('/register', (req, res) => {
-
-    let userData = req.body;
-
-    con.query(`INSERT INTO Usuarios VALUES(null, '${userData.nombre}', '${userData.apellido}', ${userData.password}, '${userData.email}', '${userData.telefono}', ${userData.fecha}, ${userData.imagen})`, (err, result) => {
-            
-        if (err) throw err;
-
-        //res.send(result);
-    });
-});
+const register = require('./register.routes.js');
+router.use('/register', register);
 
 module.exports = router;
