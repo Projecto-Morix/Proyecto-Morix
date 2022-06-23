@@ -4,14 +4,14 @@ require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const port = process.env.RPort;
 const router = require('./routes/routes.js');
-
+const cors = require('cors');
 app.listen(
     
     port, () => {
         console.log(`Listening on http://localhost:${port}`);
     }
 );
-
+app.use(cors({origin:"*"}));
 app.use(express.json());
 app.use(express.static(__dirname+'/public'));
 app.use(cookieParser());
