@@ -1,13 +1,14 @@
 import React from 'react'
 
 function Catalog({Title, Id, img}) {
+  console.log(Id);
   return (
-    <div class="catalog-container">
+    <div className="catalog-container" key={Id}>
       <>
-        <div class="card" id={Id}>
-            <div className="img" style={"background-image: url("+img+")"}></div>
+        <div className="card" >
+            <div className="img"></div>
             <div className="text">{Title}</div>
-            <button class="learnmore">SABER MAS...</button>
+            <button className="learnmore">SABER MAS...</button>
         </div>
         </>
     </div>

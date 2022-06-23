@@ -2,9 +2,9 @@ const Mysql = require('Mysql2');
 
 const con = Mysql.createConnection({
 
-    host: process.env.DbHost,
-    user: process.env.DbUser,
-    password: process.env.DbPass,
+    host: 'localhost',
+    user: 'root',
+    password: '12345678',
     database: 'Boleteria'
 });
 
