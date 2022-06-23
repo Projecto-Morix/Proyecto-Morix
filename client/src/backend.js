@@ -1,2 +1,3 @@
-const Server = 'http://192.168.137.116:1433';
-export default Server;
+const Server = 'http://localhost:1433';
+const ServerImg = 'http://localhost:1433/img/';
+module.exports = {Server, ServerImg};

@@ -1,11 +1,11 @@
-main {
+.e404{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-main > * {
+.e404> * {
     color: white;
 }
 

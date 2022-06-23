@@ -5,36 +5,25 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import SFooter from './pages/components/SFooter';
+import Details from './pages/Details';
+import Catalog from './pages/components/Catalog';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import IndexP from './pages/Index';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const RenderApp= ()=>{
 root.render(
   <React.StrictMode>
     <Router>
-      <nav>
-        <Link to="/" className="nav-logo">Morix</Link>
-        <div className='links'>
-          <ul>
-            <li><Link to="/login">Route1</Link></li>
-            <li><Link to="/login">Route2</Link></li>
-            <li><Link to="/login">Route3</Link></li>
-            <li><Link to="/login">Route4</Link></li>
-          </ul>
-          <ul>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-          </ul>
-        </div>
-      </nav>
       <Routes>
-        <Route path="/Register" element={<Register/>} />
+        <Route path="/SignIn" element={<Register/>} />
+        <Route path="/" element={<IndexP/>}/>
         <Route path="/Login" element={<Login/>} />
-        <Route path="/" element={<Home/>} />
-        <Route path="*" element={<NoPage/>}/>
+        <Route path="/catalog" element={<Home Comp={Catalog}/>} />
+        <Route path="/catalog/:Id" element={<Home Comp={Details}/>} />
+        <Route path="*" element={<Home Comp={NoPage}/>}/>
       </Routes>
-      <SFooter/>
     </Router>
   </React.StrictMode>
 );
