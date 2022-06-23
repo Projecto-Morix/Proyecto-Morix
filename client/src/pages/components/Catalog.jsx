@@ -1,18 +1,18 @@
 import React from 'react'
 
-function Catalog({Img, Name }) {
+function Catalog({Title, Id, img}) {
   return (
     <div class="catalog-container">
-        <div class="card" id='1'>
-            <div className="img"></div>
-            <div className="text">Opera de San Critobal</div>
-            
+      <>
+        <div class="card" id={Id}>
+            <div className="img" style={"background-image: url("+img+")"}></div>
+            <div className="text">{Title}</div>
             <button class="learnmore">SABER MAS...</button>
         </div>
-    
+        </>
     </div>
   )
 }
 
-export default Catalog
+export default Catalog;
 //style="background-image: url(IMG/eventOpera.jpg)
