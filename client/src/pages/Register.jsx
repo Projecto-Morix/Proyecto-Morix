@@ -1,33 +1,35 @@
-//import './../css/register.css';
+import './../css/register.css';
 import {useState, useEffect} from 'react'
 function Register() {
   const [Nombre, SetNombre] = useState('');
-  const [Nombre, SetNombre] = useState('');
-  useEffect(()=>{
-
-  },[])
+  const [Apellido, SetApellido] = useState('');
+  const [Email, SetEmail] = useState('');
+  const [Pass, SetPass] = useState(''); 
+  const [Telefono, SetTelefono] = useState('');
+  const [Birth, SetBirth] = useState('');
   return (
     <main>
-      <div class="register-panel">
-        <div class="register-header">
-          <div class="header-title">Crea tu cuenta</div>
-          <div class="header-subtitle">Y comienza la experiencia</div>
+      <div className="register-panel">
+        <div className="register-header">
+          <div className="header-title">Crea tu cuenta</div>
+          <div className="header-subtitle">Y comienza la experiencia</div>
       </div>
       <form action="" method="">
-        <label htmlFor="nombre">Nombre</label>
+        <label htmlFor="nombre" onChange={(e)=>{SetNombre(e.target.value); console.log(Nombre);}} value={Nombre}>Nombre</label>
         <input type="text" id="name"/>
-        <label htmlFor="apellidos">Apellidos</label>
+        <label htmlFor="apellidos" onChange={(e)=>{SetApellido(e.target.value); console.log(Apellido);}}>Apellidos</label>
         <input type="text" id="name"/>
-        <label htmlfor="email">Email</label>
+        <label htmlFor="email" onChange={(e)=>{SetEmail(e.target.value)}}>Email</label>
         <input type="text" id="contraseña"/>
-        <label htmlfor="password">Contraseña</label>
-        <input type="password"/>
-        <label htmlfor="telefono">Telefono</label>
-        <input type="text" id="telefono"/>
-        <label htmlfor="birth">Fecha de Nacimiento</label>
-        <input type="text" id="birth"/>
+        <label htmlFor="password">Contraseña</label>
+        <input type="password" onChange={(e)=>{SetPass(e.target.value)}} value={Pass}/>
+        <label htmlFor="telefono">Telefono</label>
+        <input type="text" id="telefono" onChange={(e)=>{SetTelefono(e.target.value)}}
+        value={Telefono}/>
+        <label htmlFor="birth">Fecha de Nacimiento</label>
+        <input type="text" id="birth" onChange={(e)=>{SetBirth(e.target.value)}} value={Birth}/>
         <input type="submit" onClick={()=>{
-          axios.post()
+          //axios.post()
         }} value="Registrarse"/>
     </form>
     </div>

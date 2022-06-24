@@ -10,7 +10,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import IndexP from './pages/Index';
 // css
 //if ()
-//import './css/normalize.css';
+import './css/normalize.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
