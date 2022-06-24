@@ -4,7 +4,7 @@ import SFooter from './components/SFooter';
 const Home = ({Comp}) => {
  
 return (
-    <div> 
+    <div className='main-container'> 
   <Navbarc/>
  <main>
      <Comp/>

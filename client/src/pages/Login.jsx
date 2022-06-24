@@ -3,14 +3,14 @@ import './../css/login.css';
 function Login() {
   return (
     <main>
-      <div class="login-panel">
-        <div class="login-header">
-          <div class="header-title">Bienvenido</div>
-          <div class="header-subtitle">Iniciar Sesión con tu Cuenta</div>
+        <div class="login-panel">
+          <div class="login-header">
+            <div class="header-title">Bienvenido</div>
+            <div class="header-subtitle">Iniciar Sesión con tu Cuenta</div>
+        </div>
+        <LoginC/>
       </div>
-      <LoginC/>
-    </div>
-  </main>
+    </main>
   );
 }
 export default Login;

@@ -29,16 +29,18 @@ html {
 
 body {
     height: 100%;
-    min-height: 100%;
 }
 
 #root {
-    display: flex;
     height: 100%;
-    background-color: var(--secundary);
+}
+
+.main-container {
+    background-color: var(--primary);
     flex-direction: column;
     min-height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    display: flex;
 }
 
 nav {
@@ -89,6 +91,7 @@ nav > .sesion > li > a {
 
 main {
     flex: 1;
+    min-height: 200vh;
 }
 
 footer {
