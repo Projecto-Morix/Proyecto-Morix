@@ -1,5 +1,5 @@
 import LoginC from './components/LoginC';
-import './../css/login.css';
+//import './../css/login.css';
 function Login() {
   return (
     <main>

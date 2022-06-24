@@ -1,4 +1,4 @@
-import '../css/Catalog.css';
+//import '../css/Catalog.css';
 import Navbarc from './components/navbarc';
 import SFooter from './components/SFooter';
 function IndexP () {
