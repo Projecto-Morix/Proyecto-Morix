@@ -1,9 +1,6 @@
 server/node_modules
-server/package.lock.json
+server/package-lock.json
 client/node_modules
-client/package.lock.json
-<<<<<<< HEAD
+client/package-lock.json
 server/.env
-=======
 .DS_Store
->>>>>>> refs/remotes/origin/main
