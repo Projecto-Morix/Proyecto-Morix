@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const con = require('../database/DBCon');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 router.post('/', (req, res) => {
 
@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
 
         con.query(`SELECT * FROM Users WHERE Username = '${username}'`, async (err, rows) => {
 
-            if(rows.length == 0 || !(await bcryptjs.compare(password, rows[0].Password))){
+            if(rows.length == 0 || !(await bcrypt.compare(password, rows[0].Password))){
 
                 res.status(400).send('Credenciales inválidas');
             } else{

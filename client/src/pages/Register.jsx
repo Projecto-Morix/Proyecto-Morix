@@ -1,13 +1,13 @@
-//import './../css/register.css';
+import './../css/register.css';
 import {useState, useEffect} from 'react'
+import axios from 'axios';
 function Register() {
-  const [Nombre, SetNombre] = useState('');
   const [Nombre, SetNombre] = useState('');
   useEffect(()=>{
 
   },[])
   return (
-    <main>
+    <main className='register-main-container'>
       <div class="register-panel">
         <div class="register-header">
           <div class="header-title">Crea tu cuenta</div>

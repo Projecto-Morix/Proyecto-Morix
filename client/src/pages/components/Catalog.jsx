@@ -14,7 +14,7 @@ function Catalog({Id}) {
     fetchData();
   }, []);
   return (
-    <div className="catalog-container">
+    <div className="catalog-main-container">
       <h1>Catalog</h1>
       <>{ console.log(Products)}</>
       <>{
