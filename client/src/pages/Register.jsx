@@ -3,29 +3,17 @@ import {useState, useEffect} from 'react'
 import axios from 'axios';
 function Register() {
   const [Nombre, SetNombre] = useState('');
-<<<<<<< HEAD
-  useEffect(()=>{
-
-  },[])
-  return (
-    <main className='register-main-container'>
-      <div class="register-panel">
-        <div class="register-header">
-          <div class="header-title">Crea tu cuenta</div>
-          <div class="header-subtitle">Y comienza la experiencia</div>
-=======
   const [Apellido, SetApellido] = useState('');
   const [Email, SetEmail] = useState('');
   const [Pass, SetPass] = useState(''); 
   const [Telefono, SetTelefono] = useState('');
   const [Birth, SetBirth] = useState('');
   return (
-    <main>
+    <main className='register-main-container'>
       <div className="register-panel">
         <div className="register-header">
           <div className="header-title">Crea tu cuenta</div>
           <div className="header-subtitle">Y comienza la experiencia</div>
->>>>>>> refs/remotes/origin/main
       </div>
       <form action="" method="">
         <label htmlFor="nombre" onChange={(e)=>{SetNombre(e.target.value); console.log(Nombre);}} value={Nombre}>Nombre</label>
