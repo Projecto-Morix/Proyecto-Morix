@@ -1,3 +1,3 @@
-const Server = 'http://localhost:1433';
-const ServerImg = 'http://localhost:1433/img/';
+const Server = 'http://localhost:1434';
+const ServerImg = Server+'/img/';
 module.exports = {Server, ServerImg};

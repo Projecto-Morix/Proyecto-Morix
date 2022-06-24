@@ -79,4 +79,4 @@ CREATE TABLE Detalles_Facturas (
 
 INSERT INTO usuarios VALUES (null, 'Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com', null, null, 'C:/C.jpg');
 INSERT INTO Patrocinadores VALUES (null, 1, '0001', 'Wachupita' );
-INSERT INTO Eventos VALUES (null, 'Party parillada', 'Pool Pary', 1, 'Wualey', '2022/06/28', 15, 'pila de romo', '["1/HeaderIMG.jpg"]');
+INSERT INTO Eventos VALUES (null, 'Party parillada', 'Pool Pary', 1, 'Wualey', '2022/06/28', 15, 'pila de romo', '["HeaderIMG.jpg"]');

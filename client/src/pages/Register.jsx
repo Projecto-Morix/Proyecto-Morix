@@ -1,5 +1,11 @@
-import './../css/register.css';
+//import './../css/register.css';
+import {useState, useEffect} from 'react'
 function Register() {
+  const [Nombre, SetNombre] = useState('');
+  const [Nombre, SetNombre] = useState('');
+  useEffect(()=>{
+
+  },[])
   return (
     <main>
       <div class="register-panel">
@@ -20,7 +26,9 @@ function Register() {
         <input type="text" id="telefono"/>
         <label htmlfor="birth">Fecha de Nacimiento</label>
         <input type="text" id="birth"/>
-        <input type="submit" value="Registrarse"/>
+        <input type="submit" onClick={()=>{
+          axios.post()
+        }} value="Registrarse"/>
     </form>
     </div>
   </main>
