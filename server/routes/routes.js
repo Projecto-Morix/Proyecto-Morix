@@ -17,4 +17,7 @@ router.use('/catalog', catalog);
 const register = require('./register.routes.js');
 router.use('/register', register);
 
+const login = require('./login.routes.js');
+router.use('/login', login);
+
 module.exports = router;
