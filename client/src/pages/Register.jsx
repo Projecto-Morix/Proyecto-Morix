@@ -18,7 +18,7 @@ function Register() {
         <label htmlFor="nombre" onChange={(e)=>{SetNombre(e.target.value); console.log(Nombre);}} value={Nombre}>Nombre</label>
         <input type="text" id="name"/>
         <label htmlFor="apellidos" onChange={(e)=>{SetApellido(e.target.value); console.log(Apellido);}}>Apellidos</label>
-        <input type="text" id="name"/>
+        <input type="text" id="apellido"/>
         <label htmlFor="email" onChange={(e)=>{SetEmail(e.target.value)}}>Email</label>
         <input type="text" id="contraseña"/>
         <label htmlFor="password">Contraseña</label>

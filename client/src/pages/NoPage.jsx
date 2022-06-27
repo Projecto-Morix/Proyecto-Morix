@@ -1,5 +1,5 @@
 import React from 'react'
-//import './../css/404.css';
+import './../css/404.css';
 //import Navbarc from './components/navbarc';
 //import SFooter from './components/SFooter';
 function NoPage() { //404 Error

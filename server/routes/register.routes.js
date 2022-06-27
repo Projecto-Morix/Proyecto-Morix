@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const con = require('../database/DBCon');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 
     const userData = req.body;
 
@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
         res.status(400).send('Faltan datos');
     } else{
 
-        let passEncrypt = await bcryptjs.hash(userData.password, 10);
+        let passEncrypt = await bcrypt.hash(userData.password, 10);
 
         con.query(`INSERT INTO Usuarios VALUES(null, '${userData.nombre}', '${userData.apellido}', ${passEncrypt}, '${userData.email}', '${userData.telefono}', ${userData.fecha}, ${userData.imagen})`, (err, result) => {
             

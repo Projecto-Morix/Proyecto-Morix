@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react'
 import axios from 'axios';
 import {Server, ServerImg} from '../backend';
 import {useParams} from 'react-router-dom';
-//import '../css/productdetail.css';
+import '../css/productdetail.css';
 function Details(props){
     let {Id} = useParams();
     const [Productz, SetProductz] = useState([]);
