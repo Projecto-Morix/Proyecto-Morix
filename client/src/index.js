@@ -8,6 +8,7 @@ import Details from './pages/Details';
 import Catalog from './components/Catalog';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import IndexP from './pages/Index';
+import { UserProvider } from './components/UserContext';
 // css
 //if ()
 import './css/normalize.css';
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const RenderApp= ()=>{
 root.render(
   <React.StrictMode>
+    <UserProvider>
     <Router>
       <Routes>
         <Route path="/SignIn" element={<Register/>} />
@@ -27,6 +29,7 @@ root.render(
         <Route path="*" element={<Home Comp={NoPage}/>}/>
       </Routes>
     </Router>
+    </UserProvider>
   </React.StrictMode>
 );
 }

@@ -1,12 +1,13 @@
 import LoginC from './../components/LoginC';
 import './../css/login.css';
+
 function Login() {
   return (
     <main>
-        <div class="login-panel">
-          <div class="login-header">
-            <div class="header-title">Bienvenido</div>
-            <div class="header-subtitle">Iniciar Sesión con tu Cuenta</div>
+        <div className="login-panel">
+          <div className="login-header">
+            <div className="header-title">Bienvenido</div>
+            <div className="header-subtitle">Iniciar Sesión con tu Cuenta</div>
         </div>
         <LoginC/>
       </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-const logged = "s";
-const navbarc = () => {
+import {useUserContext} from '../components/UserContext';
+const Navbarc = () => {
+    const [User, SetUser] = useUserContext();
   return (
     <nav>
     <Link to="/" className="nav-logo">Morix</Link>
@@ -11,16 +12,18 @@ const navbarc = () => {
         <li><Link to="/catalog">Catalog</Link></li>
       </ul>
       <ul>
-        <>{ !logged?
-        <>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/SignIn">Register</Link></li>
-        </> : <li><Link to="/user">User: {"Juan"}</Link></li>
+        <>{ User.auth? <><li><Link to="/user">Bienvenido {User.UserData.Nombre+'!'}</Link></li>
+        <li><button>Log Out</button> </li>
+        </>
+         : <>
+         <li><button><Link to="/login">Log-in</Link></button></li>
+         <li><button><Link to="/SignIn">Register</Link></button></li>
+         </>
          } </>
       </ul>
     </div>
   </nav>
   )
 }
-
-export default navbarc
+//SetUser({ auth: false, token: null,UserData:{}})
+export default Navbarc

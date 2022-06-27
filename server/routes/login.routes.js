@@ -1,27 +1,37 @@
 const router = require("express").Router();
 const con = require('../database/DBCon');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-router.post('/',async (req, res) => {
+router.post('/', async (req, res) => {
 
-    const {username, password} = req.body;
+const { Email, password } = req.body;
 
-    if (!username || !password){
+if (!Email || !password) {
+    res.status(400).send({ auth: false, err: 'Credenciales incompletas' });
+    return;
+}
+con.query(`SELECT * FROM Usuarios WHERE Email = '${Email}'`, async (err, rows) => {
+    if (err) {
+        res.status(500).send({err:err});
+        return;}
+    const result = await bcrypt.compare(password, rows[0].PasHash);
+    if (!result) {
+        res.status(401).send({ auth: false, err: 'Credenciales inválidas' });
+        return; 
+    } 
+// req.session.user = rows[0];
+const id = rows[0].Id;
+rows[0].PasHash = null;
+jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
+    if (err) {
+        res.status(500).send({ auth: false, err: 'Error al generar el token' });
+        return;
+    }
+    res.status(200).send({ auth: true, token: token, UserData: rows[0] });
+});
 
-        res.status(400).send('Credenciales inválidas');
-    } else{
-
-        con.query(`SELECT * FROM Users WHERE Username = '${username}'`, async (err, rows) => {
-
-            if(rows.length == 0 || !(await bcrypt.compare(password, rows[0].Password))){
-
-                res.status(400).send('Credenciales inválidas');
-            } else{
-
-                res.status(200).send();
-            };
-        });
-    };
+});
 });
 
 module.exports = router;

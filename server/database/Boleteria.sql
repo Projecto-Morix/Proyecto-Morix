@@ -76,7 +76,10 @@ CREATE TABLE Detalles_Facturas (
     CONSTRAINT fk_factura FOREIGN KEY (id_factura) REFERENCES Facturas(id_factura),
     CONSTRAINT fk_boleto FOREIGN KEY (id_boleto) REFERENCES Boletos(id_boleto)
 );*/
-
-INSERT INTO usuarios VALUES (null, 'Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com', null, null, 'C:/C.jpg');
+SELECT * FROM Usuarios WHERE Email = 'jhonmiguely3@gmail.com';
+select * from Usuarios;
+delete from usuarios where ID_Usuario>0;
+update Usuarios set Email='jhonmiguely3@gmail.com' where ID_Usuario=1 ;
+INSERT INTO Usuarios VALUES(null, 'Jhon', 'Perez', '$2b$10$VNc04ay400mMQSW.6a7LCOicRGaKOGkrlxWo4yFZW7wsQwHdJtTgC', 'jhonmiguely3@gmail.com', '5151881', '2002-06-27', null);
 INSERT INTO Patrocinadores VALUES (null, 1, '0001', 'Wachupita' );
 INSERT INTO Eventos VALUES (null, 'Party parillada', 'Pool Pary', 1, 'Wualey', '2022/06/28', 15, 'pila de romo', '["HeaderIMG.jpg"]');
