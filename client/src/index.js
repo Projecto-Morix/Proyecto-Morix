@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Home from './pages/Home';
+import Home from './components/Home';
 import NoPage from './pages/NoPage';
 import Details from './pages/Details';
-import Catalog from './pages/components/Catalog';
+import Catalog from './components/Catalog';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import IndexP from './pages/Index';
 // css
