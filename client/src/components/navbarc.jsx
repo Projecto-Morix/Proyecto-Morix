@@ -17,8 +17,8 @@ const Navbarc = () => {
         <li><button>Log Out</button> </li>
         </>
          : <>
-         <li><button><Link to="/login">Log-in</Link></button></li>
-         <li><button><Link to="/SignIn">Register</Link></button></li>
+         <li><Link to="/login">Log-in</Link></li>
+         <li><Link to="/SignIn">Register</Link></li>
          </>
          } </>
       </ul>
