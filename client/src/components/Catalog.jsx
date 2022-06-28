@@ -15,8 +15,8 @@ function Catalog({ Id }) {
   }, []);
   return (
     <div className={CatalogCSS.catalog}>
+      <h2>Catalogo</h2>
       <div className={CatalogCSS.catalogContainer}>
-        <h2>Catalog</h2>
         <>{console.log(Products)}</>
         <>{
           Products.map(Product => (

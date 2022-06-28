@@ -1,0 +1,18 @@
+.index {
+    min-height: 100%;
+}
+
+.welcome {
+    background-color: red;
+    height: calc(100vh - 58px);
+}
+
+.aboutUs {
+    height: 75vh;
+    background-color: green;
+}
+
+.contactUs {
+    height: 75vh;
+    background-color: blue;
+}

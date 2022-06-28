@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import LoginC from './components/LoginC';
-import './../css/login.css';
-function Login() {
-  return (
-    <main className='login-main-container'>
-        <div class="login-panel">
-          <div class="login-header">
-            <div class="header-title">Bienvenido</div>
-            <div class="header-subtitle">Iniciar Sesión con tu Cuenta</div>
-=======
 import LoginC from './../components/LoginC';
 import LoginCSS from './../css/login.module.css';
 
@@ -24,7 +13,6 @@ function Login() {
           </div>
           <LoginC/>
           </div>
->>>>>>> refs/remotes/origin/main
         </div>
       </main>
     </div>

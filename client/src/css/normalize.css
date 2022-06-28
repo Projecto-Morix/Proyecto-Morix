@@ -91,12 +91,8 @@ footer {
     display: flex;
     justify-content: center;
     padding: 20px;
-<<<<<<< HEAD
-    background-color: var(--secundary)
-=======
     background-color: var(--secundary);
     border-top: 1px solid rgba(255, 255,255, 0.1);
->>>>>>> refs/remotes/origin/main
 }
 
 footer > * {
