@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
         });
     });
 
-    //Lo de verifica si existe el usuario es innecesario ahora que lo veo, ya que el usuario, si va a ser patrocinador, debe estar logueado, pero ahi ta por si acaso :D.
+    //Lo de verifica si existe el usuario es innecesario ahora que lo veo, ya que el usuario, si va a ser patrocinador, debe estar logueado, pero ahi ta por si acaso.
 });
 
 module.exports = router;
