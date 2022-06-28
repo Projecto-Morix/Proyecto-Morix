@@ -32,4 +32,10 @@ router.use('/register', register);
 const login = require('./login.routes.js');
 router.use('/login', login);
 
+const event = require('./event.routes.js');
+router.use('/add-event', event);
+
+const patrocinador = require('./patrocinador.routes.js');
+router.use('/patrocinador', patrocinador);
+
 module.exports = router;
