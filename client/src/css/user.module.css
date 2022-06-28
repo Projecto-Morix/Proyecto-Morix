@@ -1,0 +1,19 @@
+.user {
+    min-height: 100%;
+    padding: 25px;
+}
+
+.settings {
+    margin-bottom: 30px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    color: var(--acent);
+    border: 1px solid var(--acent);
+    padding: 10px 15px;
+}

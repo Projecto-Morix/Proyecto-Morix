@@ -1,4 +1,8 @@
+<<<<<<< HEAD:client/src/css/login.css
 .login-main-container {
+=======
+.login {
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
     height: 100%;
     background-color: var(--secundary);
     display: flex;
@@ -6,11 +10,18 @@
     align-items: center;
 }
 
+<<<<<<< HEAD:client/src/css/login.css
 .login-panel {
     width: clamp(300px, 25vw, 375px);
     background-color: var(--primary);
     padding: clamp(20px, 8vh, 70px) 20px;
     border-radius: 7px;
+=======
+.loginPanel {
+    width: clamp(300px, 35vw, 400px);
+    background-color: var(--primary);
+    padding: clamp(20px, 7vh, 70px) 20px;
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
     row-gap: clamp(20px, 6vh, 50px);
     margin: 50px 10px;
@@ -19,39 +30,50 @@
     justify-content: center;
 }
 
-.login-header {
+.loginHeader {
     color: var(--text);
     text-align: center;
 }
 
-.login-header > .header-title {
+.loginHeader > .headerTitle {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 2px;
 }
 
-.login-header > .header-subtitle {
+.loginHeader > .headerSubtitle {
     color: var(--text-light);
 }
 
-.login-header > *, form > * {
+.loginHeader > *, form > * {
     display: block;
 }
 
+<<<<<<< HEAD:client/src/css/login.css
 .login-panel > form > input {
+=======
+form > input {
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
     width: 100%;
     padding: 7px;
     outline: none;
-    border-radius: 4px;
 }
 
+<<<<<<< HEAD:client/src/css/login.css
 .login-panel > form > input[type="text"], form > input[type="password"] {
+=======
+form > input[type="email"], form > input[type="password"] {
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
     margin-bottom: 20px;
     border: 1px solid lightgray;
     font-size: 0.9rem;
 }
 
+<<<<<<< HEAD:client/src/css/login.css
 .login-panel > form > input[type="text"]:focus, form > input[type="password"]:focus {
+=======
+form > input[type="email"]:focus, form > input[type="password"]:focus {
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
     border-color: var(--acent);
 }
 
@@ -80,7 +102,11 @@
 }
 
 @media (max-width: 500px) {
+<<<<<<< HEAD:client/src/css/login.css
     .login-panel {
+=======
+    .loginPanel {
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
         border: none;
         box-shadow: none;
         height: 100%;
@@ -88,6 +114,7 @@
         border-radius: 0;
         margin: 0;
     }
+<<<<<<< HEAD:client/src/css/login.css
 
     .login-panel > form {
         width: 100%;
@@ -96,4 +123,6 @@
     .login-panel > form > input {
         width: 100%;
     }
+=======
+>>>>>>> refs/remotes/origin/main:client/src/css/login.module.css
 }

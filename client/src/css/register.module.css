@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/src/css/register.css
 .register-main-container {
     height: 100%;
     background-color: var(--secundary);
@@ -7,51 +8,79 @@
 }
 
 .register-panel {
+=======
+.register {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secundary);
+}
+
+.registerPanel {
+    width: clamp(300px, 35vw, 400px);
+>>>>>>> refs/remotes/origin/main:client/src/css/register.module.css
     background-color: var(--primary);
     padding: clamp(20px, 7vh, 70px) 20px;
-    border-radius: 7px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
     row-gap: clamp(20px, 5vh, 50px);;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: clamp(400px, 70vw, 500px);
     margin: 50px 10px;
 }
 
+<<<<<<< HEAD:client/src/css/register.css
 .register-panel > .register-header {
+=======
+.registerHeader {
+>>>>>>> refs/remotes/origin/main:client/src/css/register.module.css
     color: var(--text);
     text-align: center;
 }
 
-.register-header > .header-title {
+.registerHeader > .headerTitle {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 2px;
 }
 
-.register-header > .header-subtitle {
+.registerHeader > .headerSubtitle {
     color: var(--text-light);
 }
 
+<<<<<<< HEAD:client/src/css/register.css
 .register-panel > *, form > * {
+=======
+.registerHeader > *, form > * {
+>>>>>>> refs/remotes/origin/main:client/src/css/register.module.css
     display: block;
 }
 
 .register-panel > form > input {
     padding: 7px;
     outline: none;
+<<<<<<< HEAD:client/src/css/register.css
     border-radius: 4px;
     width: 100%;
 }
 
 .register-panel > form > input[type="text"], form > input[type="password"] {
+=======
+}
+
+form > input[type="text"], form > input[type="password"], form > input[type="date"] {
+>>>>>>> refs/remotes/origin/main:client/src/css/register.module.css
     margin-bottom: 20px;
     border: 1px solid lightgray;
     font-size: 0.9rem;
 }
 
+<<<<<<< HEAD:client/src/css/register.css
 .register-panel > form > input[type="text"]:focus, form > input[type="password"]:focus {
+=======
+form > input[type="text"]:focus, form > input[type="password"]:focus, form > input[type="date"] {
+>>>>>>> refs/remotes/origin/main:client/src/css/register.module.css
     border-color: var(--acent);
 }
 
@@ -68,7 +97,7 @@
 }
 
 @media (max-width: 500px) {
-    .register-panel {
+    .registerPanel {
         border: none;
         box-shadow: none;
         height: 100%;
