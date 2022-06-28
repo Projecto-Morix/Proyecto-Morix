@@ -4,3 +4,4 @@ client/node_modules
 client/package-lock.json
 server/.env
 .DS_Store
+server/.env
