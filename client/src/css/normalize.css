@@ -74,17 +74,13 @@ nav > .links > ul > li {
     padding: 0 20px;
 }
 
-nav > .links ul > li > a {
+nav > .links > ul > li > a {
     color: white;
 }
 
 nav > .links > li {
     display: inline-block;
     padding: 0 20px;
-}
-
-nav > .sesion > li > a {
-    color: white;
 }
 
 main {

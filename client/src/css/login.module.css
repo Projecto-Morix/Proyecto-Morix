@@ -10,7 +10,6 @@
     width: clamp(300px, 35vw, 400px);
     background-color: var(--primary);
     padding: clamp(20px, 7vh, 70px) 20px;
-    border-radius: 7px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
     row-gap: clamp(20px, 5vh, 50px);;
     display: flex;
@@ -42,7 +41,6 @@ form > input {
     width: 100%;
     padding: 7px;
     outline: none;
-    border-radius: 4px;
 }
 
 form > input[type="email"], form > input[type="password"] {

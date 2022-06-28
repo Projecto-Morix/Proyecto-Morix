@@ -1,52 +1,19 @@
-.containerTopIMG{
-    height: 60vh;
-    width: auto;
-    background-size: cover;
-    background-position: center;
-    background-position-x: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
+.catalog {
+    height: 100%;
 }
 
-.containerTopIMG::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#db5f0068;
-    z-index:0;
+.catalogContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
 }
 
-.searchtext{
-    border: 0;
-    background-color: transparent;
-    font-weight: 400;
-    font-size: 15px;
-    text-align: right;
-    outline: 0;
-    color:white;
-}
-
-
-.headtext{
-    position: absolute;
-    color: WHITE;
-    margin: 70vh 50px;
-    font-size: 120px;
-    font-weight: bolder;
-}
-
-.principal-title{
-    position: absolute;
-    margin-top: 25vh;
-    margin-left: 30px;
-    z-index: 100;
-    color: white;
-    font-size: 70px;
-    font-weight: 700;
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .subtitle{
@@ -58,14 +25,6 @@
     color: white;
 }
 
-.catalog-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    
-}
-
 .card{
     margin: 10px;
     background-color: white;
@@ -74,20 +33,22 @@
     align-items: center;
     width: 240px;
     height: auto;
-    box-shadow: 0.1px 5px 15px rgba(0, 0, 0, 0.361);
+    box-shadow: 0.1px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.text{
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'Montserrat';
+.cardContent {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
 }
 
 .learnmore{
-    background-color: rgb(177, 84, 193);
+    margin-top: 10px;
+    background-color: var(--acent);
     border: 0;
-    padding: 8px;
-    margin: 8px;
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
 }
 
 .learnmore a{
@@ -99,9 +60,9 @@
 }
 
 .img{
-    margin: 8px;
     height: 224px;
-    width: 224px;
+    width: 100%;
     background-size: cover;
     background-position: center center;
+    background-color: red;
 }
