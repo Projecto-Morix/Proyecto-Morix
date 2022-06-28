@@ -1,11 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import {useUserContext} from './UserContext';
+import '../css/normalize.css'
 const Navbarc = () => {
     const [User, SetUser] = useUserContext();
   return (
     <nav>
-    <Link to="/" className="nav-logo">Morix</Link>
+    <Link to="/" className="navLogo">Morix</Link>
     <div className='links'>
       <ul>
         <li><Link to="/">Home</Link></li>

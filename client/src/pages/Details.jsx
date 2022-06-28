@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react'
 import axios from 'axios';
 import {Server, ServerImg} from '../backend';
 import {useParams} from 'react-router-dom';
-import '../css/productdetail.css';
+import DetailsCSS from '../css/productdetail.module.css';
 function Details(props){
     let {Id} = useParams();
     const [Productz, SetProductz] = useState([]);
@@ -30,13 +30,13 @@ return(
      <div className="desc">{Product.Descripcion}</div>
      <div className="localizaciondatos">
        <div className="localizacion">
-         <div className="title-localizacion">Localización</div>
+         <div className="titleLocalizacion">Localización</div>
          <div className="textcontains">República Dominicana</div>
          <div className="textcontains">{Product.locacion}</div>
          <div className="textcontains">{Product.locacion}</div>
        </div>
        <div className="datosgenerales">
-         <div className="title-datos">Datos Generales</div>
+         <div className="titleDatos">Datos Generales</div>
          <div className="textcontains">Fecha:{Product.Fecha_Evento}</div>
          <div className="textcontains">Edad Mínima: {Product.Edad_Min} años</div>
        </div>

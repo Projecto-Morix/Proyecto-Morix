@@ -1,20 +1,22 @@
-.e404{
+.e404 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--secundary);
+    min-height: 100%;
 }
 
 .e404> * {
     color: white;
 }
 
-.error-404-title {
+.error404Title {
     font-size: 8rem;
     line-height: 1.1;
 }
 
-.error-404-subtitle {
+.error404Subtitle {
     font-size: 1.2rem;
     display: block;
     font-weight: 400;

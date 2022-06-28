@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/RegisterProv.css';
+import RegisterProvCSS from '../css/RegisterProv.module.css';
 function RegisterProv  () {
   return (
     <main class="form-register">

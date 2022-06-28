@@ -1,4 +1,3 @@
-//import '../css/Catalog.css';
 import Navbarc from './Navbarc';
 import SFooter from './SFooter';
 const Home = ({Comp}) => {

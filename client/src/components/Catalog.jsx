@@ -13,7 +13,7 @@ function Catalog({ Id }) {
     fetchData();
   }, []);
   return (
-    <div className="catalog-container">
+    <div className="catalogContainer">
       <h1>Catalog</h1>
       <>{console.log(Products)}</>
       <>{
