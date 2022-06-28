@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-// if (IsNan(Number(req.params.id))) {  console.log("bay/"+req.params.id); return res.status(400).send('Invalid ID, Must be a number'); }
+    
+    //if (IsNan(Number(req.params.id))) {  console.log("bay/"+req.params.id); return res.status(400).send('Invalid ID, Must be a number'); }
     con.query('SELECT * FROM Eventos where ID_Evento='+req.params.id, (err, result) => {
 
         if (err) throw err;
