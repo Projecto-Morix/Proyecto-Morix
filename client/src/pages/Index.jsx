@@ -1,5 +1,5 @@
 import CatalogCSS from '../css/Catalog.module.css';
-import Navbarc from './../components/Navbarc';
+import Navbarc from './../components/navbarc';
 import SFooter from './../components/SFooter';
 function IndexP () {
 return (

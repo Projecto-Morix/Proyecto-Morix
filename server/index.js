@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const port = process.env.RPort;
 const cors = require('cors');
 app.listen(
-    
     port, () => {
         console.log(`Listening on http://localhost:${port}`);
     }
