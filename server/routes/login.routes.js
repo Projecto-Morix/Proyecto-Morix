@@ -1,10 +1,11 @@
 const router = require("express").Router();
 const con = require('../database/DBCon');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken'); 
 
 router.post('/', (req, res) => {
-
-    const {username, password} = req.body;
+console.log(req.body);
+    const {Email, password} = req.body;
 
     if (!Email || !password) {      
         res.status(400).send({ auth: false, err: 'Credenciales incompletas' });
@@ -17,15 +18,18 @@ router.post('/', (req, res) => {
             res.status(500).send({ err:err });
             return;
         }
-
-        const result = await bcrypt.compare(password, rows[0].PassHash);
+        if (rows.length === 0) {
+            res.status(400).send({ auth: false, err: 'Usuario no encontrado' });
+            return;
+        }
+        const result = await bcrypt.compare(password, rows[0].PasHash);
         if (!result) {
             res.status(401).send({ auth: false, err: 'Credenciales inválidas' });
             return; 
         } 
         //req.session.user = rows[0];
         const id = rows[0].Id;
-        rows[0].PassHash = null;
+        rows[0].PasHash = null;
         jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
 
             if (err) {               

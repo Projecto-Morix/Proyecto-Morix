@@ -27,11 +27,12 @@ router.post('/', async (req, res) => {
     // normalize  userData.fecha for mysql date format
     userData.fecha= new Date(userData.fecha).toISOString().substring(0, 10);
 
-    con.query(`INSERT INTO Usuarios VALUES(null, '${userData.nombre}', '${userData.apellido}', '${passEncrypt}', '${userData.email}', '${userData.telefono}', '${userData.fecha}', null)`, (err, result) => {
+    con.query(`INSERT INTO Usuarios VALUES(null, '${userData.nombre}', '${userData.apellido}', '${passEncrypt}', '${userData.email}', '${userData.telefono}', '${userData.fecha}', null, false)`, (err, result) => {
         
         if (err) {
             console.log(err); 
             res.status(400).send({ err: err });
+            return;
         };
         
         res.send({ id: result.insertId });

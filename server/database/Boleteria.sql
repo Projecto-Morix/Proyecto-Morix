@@ -73,6 +73,6 @@ CREATE TABLE Detalles_Facturas (
     CONSTRAINT fk_boleto FOREIGN KEY (id_boleto) REFERENCES Boletos(id_boleto)
 );*/
 
-INSERT INTO usuarios VALUES (null, 'Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com', null, null, 'C:/C.jpg');
+INSERT INTO usuarios VALUES (null, 'Juan Alberto', 'ubiere', '5', 'jhonmiguel.1@gmail.com', null, null, 'C:/C.jpg', true);
 INSERT INTO Patrocinadores VALUES (null, 1, '0001', 'Wachupita' );
 INSERT INTO Eventos VALUES (null, 'Party parillada', 'Pool Pary', 1, 'Wualey', '2022/06/28', 15, 'pila de romo', '["HeaderIMG.jpg"]');
