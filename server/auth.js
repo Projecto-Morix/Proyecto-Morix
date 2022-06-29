@@ -1,24 +1,31 @@
 const con = require('./database/DBCon');
 const jwt = require('jsonwebtoken');
 
-exports.Autenticado = async (req, res, next) => {
+module.exports =  () =>  {
+    return(req, res, next) =>{
 
-    if(req.body.token == null){ 
-
-        next(); return; 
+        console.log('first middleware');
+        console.log(req.body);
+    console.log('checando');
+   if (req.body.token === null){ 
+        return; 
     }
-
-    console.log(jwt.verify(req.body.token, process.env.JWT_SECRET));
-    if(jwt.verify(req.body.token, process.env.JWT_SECRET)){}
-
-    con.query(`SELECT IsPatrocinador FROM Usuarios WHERE ID_Usuarios = '${id}'`, (err, rows) => {
-
-        if (err) throw err;
-        req.body.IsPatrocinador = rows.IsPatrocinador;
-        next();
+    jwt.verify(req.body.token, process.env.JWT_SECRET,(err, decoded)=>{
+        if (err) {
+            console.log('token e falso');
+            return res.status(401).send({ auth: false, token: null });
+        }
+        const Id= decoded.payload.id;
+        con.query(`SELECT IsPatrocinador FROM Usuarios WHERE ID_Usuario = '${Id}'`, (err, rows) => {
+        
+            if (err) {
+                console.log(err)
+                return  res.status(500).send({err: 'db Error'});
+            }
+            console.log(rows);
+            req.body.IsPatrocinador = rows[0].IsPatrocinador;
+            next();
+        });
     });
-
-    return;
-
-    next();
+}
 };

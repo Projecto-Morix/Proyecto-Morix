@@ -10,7 +10,7 @@ function Details(props){
        
       async function fetchData() {
         
-    const req= await axios.get(Server+"/catalog/"+Id);
+    const req= await axios.get(Server+"/catalog/details/"+Id);
     SetProductz(req.data);
 
     return req.data;

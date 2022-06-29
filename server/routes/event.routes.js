@@ -2,7 +2,6 @@ const router = require("express").Router();
 const con = require('../database/DBCon');
 
 router.post('/', async (req, res) => {
-
     const eventInfo = req.body;
     if (!eventInfo.Nombre || !eventInfo.Tipo || !eventInfo.Patrocinador || !eventInfo.Locacion || !eventInfo.Fecha || !eventInfo.Edad_Min || !eventInfo.Descripcion || !eventInfo.Imagenes){
 

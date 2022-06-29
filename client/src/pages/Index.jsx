@@ -20,7 +20,7 @@ function IndexP() {
       <section className={IndexCSS.contactUs}>
           <div className={IndexCSS.contactUsText}>
             <h2 className={IndexCSS.contactUsTitle}>Contactanos</h2>
-            <a>Contacto</a>
+            <h1>Contacto</h1>
           </div>
           <div className={IndexCSS.contactUsImg}></div>
       </section>

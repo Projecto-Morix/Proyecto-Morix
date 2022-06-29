@@ -1,10 +1,27 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
+import React, {useEffect} from 'react'
+import {Link, useNavigate} from 'react-router-dom';
 import {useUserContext} from './UserContext';
-
+import {Axios} from './../backend';
 const Navbarc = () => {
-    const [User, SetUser] = useUserContext();
-
+  const navigate= useNavigate();
+  const [User, SetUser] = useUserContext();
+    useEffect(() => {
+      const checkuser = async () => {
+      if (!document.cookie.includes('token')) return;
+     const resp = await Axios.post('/auth', {
+          token: document.cookie.replace('token=','')
+        })
+        if (resp.status === 200) {
+          SetUser({...resp.data, auth:true});
+        }
+        if (resp.status===400){
+          SetUser({...resp.data, auth: false});
+          navigate('/login');
+        }
+      
+    }
+    checkuser();
+    }, [navigate, SetUser]);
   return (
     <nav>
       <div className='default-nav'>
@@ -18,7 +35,7 @@ const Navbarc = () => {
             <>{ User.auth? <>
             <li><Link to="/user">Bienvenido {User.UserData.Nombre+'!'}</Link></li>
             <li><Link to='/logout'>Log Out</Link> </li>
-            </>
+           </>
             : <>
             <li><Link to="/login">Log-in</Link></li>
             <li><Link to="/SignIn">Register</Link></li>
@@ -29,7 +46,7 @@ const Navbarc = () => {
       </div>
       <div className='responsive-nav'>
         <Link to="/" className="nav-logo">Morix</Link>
-        <button class="nav-menu" onClick={responsiveMenuClick}><i class="fa-solid fa-bars"></i></button>
+        <button className="nav-menu" onClick={responsiveMenuClick}><i className="fa-solid fa-bars"></i></button>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/catalog">Catalog</Link></li>

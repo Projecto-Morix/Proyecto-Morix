@@ -28,9 +28,14 @@ console.log(req.body);
             return; 
         } 
         //req.session.user = rows[0];
-        const id = rows[0].Id;
+         
         rows[0].PasHash = null;
-        jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
+        const payload = {
+            id: rows[0].ID_Usuario,
+            IsPatrocinador: rows[0].IsPatrocinador
+        };
+        console.log(payload);
+        jwt.sign({ payload }, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
 
             if (err) {               
                 res.status(500).send({ auth: false, err: 'Error al generar el token' });

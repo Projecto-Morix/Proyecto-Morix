@@ -6,13 +6,29 @@ function LoginC() {
     const navigate = useNavigate();
     const [Guide, SetGuide] = useState(() => { return { status: false, msg: 'Ingrese con su E-Mail y contraseña', style: { color: 'black' } } });
     const [User, SetUser] = useUserContext();
-useEffect(() => {
-    if (document.cookie.includes('token'))  {
-        SetUser({token: document.cookie.replace('token=',''), auth: true, UserData:{ Nombre: 'Juan'}});
-            navigate('/');
-        }else console.log(document.cookie);
-});
-   
+    useEffect(() => {
+     
+    const checkuser = async () => {
+        let NUser=null;
+        if (document.cookie.includes('token'))  {
+      NUser={token: document.cookie.replace('token=',''), auth: true};
+   const resp = await Axios.post('/auth', {
+        token: NUser.token,
+        auth: false
+      });
+      if (resp.status === 200) {
+        SetUser({...NUser, auth: true, UserData: resp.data.UserData});
+        navigate('/');
+      }
+      if (resp.status===400){
+        SetUser({...NUser, auth: false});
+      }
+    
+    }
+}
+  checkuser();
+},[ navigate, SetUser]);
+
     const LogIn= async()=>{
     const Email = User.UserData.Email, password = User.UserData.password;
     try{
@@ -22,6 +38,7 @@ useEffect(() => {
             SetUser(res.data);
             document.cookie = `token=${res.data.token} ; max-age=${60 * 60}; path=/; samesite=strict`;
             navigate('/');
+
         }else{
             SetGuide({status: true, msg: res.data.err, style: { color: 'red' }});
         }

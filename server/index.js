@@ -4,7 +4,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const port = process.env.RPort;
 const cors = require('cors');
-const Auth = require('./auth');
+//const Auth = require('./auth');
 
 app.listen(
     port, () => {
@@ -16,7 +16,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 app.use(cookieParser());
-//app.use(Auth());
+//app.use(Auth);
 app.use(express.urlencoded({ extended: true }));
 
 const routes = require('./routes/routes.js');
