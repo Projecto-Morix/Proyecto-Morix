@@ -1,4 +1,4 @@
-const con = require('../database/DBCon');
+const con = require('./database/DBCon');
 const jwt = require('jsonwebtoken');
 
 exports.Autenticado = async (req, res, next) => {
