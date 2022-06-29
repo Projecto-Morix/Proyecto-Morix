@@ -10,7 +10,8 @@ CREATE TABLE Usuarios (
     Email NVARCHAR(50),
     Telefono NVARCHAR(20),
     Birth DATE,
-    Imagen NVARCHAR(50)
+    Imagen NVARCHAR(50),
+    IsPatrocinador BOOLEAN
 );
 
 CREATE TABLE Patrocinadores (
@@ -54,17 +55,12 @@ CREATE TABLE Boletos (
     CONSTRAINT FK_Bolotos_Categoria FOREIGN KEY (id_categoria) REFERENCES Categoria_Boletos(Id_categoria)
 );
 /*
-CREATE TABLE Facturas (
-=======
-
 /*CREATE TABLE Facturas (
->>>>>>> refs/remotes/origin/main
 	id_factura INT PRIMARY KEY AUTO_INCREMENT,
     id_usuario INT,
     tipo_pago NVARCHAR(50),
     cantidad INT,
     total FLOAT,
-    
     CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
