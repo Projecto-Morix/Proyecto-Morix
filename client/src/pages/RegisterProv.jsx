@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../css/ProvReg.module.css';
+import styles from '../css/provreg.module.css';
 function RegisterProv  () {
   return (
     <div className={styles.registerProv}>
