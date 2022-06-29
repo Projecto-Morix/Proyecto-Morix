@@ -12,7 +12,7 @@ const Navbarc = () => {
         <div className='links'>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/catalog">Catalog</Link></li>
+            <li><Link to="/catalog">Catalogo</Link></li>
           </ul>
           <ul>
             <>{ User.auth? <>

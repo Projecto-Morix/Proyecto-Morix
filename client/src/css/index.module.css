@@ -18,14 +18,16 @@
 }
 
 .welcomeTitle {
-    font-size: clamp(1.5rem, 8vw, 10rem);
+    font-size: clamp(1.5rem, 5.3vw, 10rem);
     color: var(--secundary);
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .welcomeText > p {
     color: var(--secundary);
-    font-size: clamp(1rem, 1.7vw, 1.8rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-weight: 400;
 }
 
 .welcomeImg {
@@ -36,13 +38,76 @@
 }
 
 .aboutUs {
-    height: clamp(50vh, 65vw, 75vh);
+    height: clamp(25vh, 47vw, 75vh);
     background-color: var(--secundary);
+    display: flex;
+    padding: 0 40px;
+    column-gap: 40px;
+}
+
+.aboutUsImg {
+    flex: 1;
+    background-image: url("../../public/images/team.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.aboutUsText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutUsText > * {
+    color: white;
+}
+
+.aboutUsText > h2 {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.aboutUsText > p {
+    font-weight: 300;
+    max-width: 750px;
 }
 
 .contactUs {
-    height: clamp(50vh, 65vw, 75vh);
+    height: clamp(25vh, 47vw, 75vh);
     background-color: white;
+    display: flex;
+    padding: 0 40px;
+    column-gap: 40px;
+}
+
+.contactUsText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactUsTitle {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.contactUsText > a {
+    background-color: var(--acent);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contactUsImg {
+    flex: 1;
+    background-image: url("../../public/images/contact.png");
+    background-position: center center;
+    background-size: cover;
 }
 
 @media (max-width: 600px) {
@@ -63,7 +128,31 @@
 
     .welcomeImg {
         flex: none;
-        height: 50vh;
+        height: 46vh;
         width: 100%;
+    }
+
+    .aboutUs, .contactUs {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 40px;
+    }
+
+    .aboutUs > *, .contactUs > * {
+        width: 100%;
+    }
+
+    .aboutUsImg, .contactUsImg {
+        flex: none;
+        height: 40vh;
+        width: 100%;
+    }
+
+    .aboutUsText, .contactUsText {
+        margin: 40px 0;
+    }
+
+    .aboutUsText > h2, .contactUsTitle {
+        font-size: 8vw;
     }
 }

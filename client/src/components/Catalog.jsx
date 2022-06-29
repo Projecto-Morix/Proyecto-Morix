@@ -15,7 +15,7 @@ function Catalog({ Id }) {
   }, []);
   return (
     <div className={CatalogCSS.catalog}>
-      <h2>Catalogo</h2>
+      <h2 className={CatalogCSS.catalogTitle}>Eventos</h2>
       <div className={CatalogCSS.catalogContainer}>
         <>{console.log(Products)}</>
         <>{
@@ -24,7 +24,7 @@ function Catalog({ Id }) {
               <div className={CatalogCSS.img} style={{ backgroundImage: 'url(' + ServerImg + Product.Imagenes[0] + ')' }}></div>
               <div className={CatalogCSS.cardContent}>
                 <div className={CatalogCSS.text}>{Product.Nombre}</div>
-                <button className={CatalogCSS.learnmore} onClick={() => { navigate('/catalog/' + Product.ID_Evento) }}>SABER MAS</button>
+                <button className={CatalogCSS.learnmore} onClick={() => { navigate('/catalog/' + Product.ID_Evento) }}>DETALLES</button>
               </div>
             </div>
           ))} </>
