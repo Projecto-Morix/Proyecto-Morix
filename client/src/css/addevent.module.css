@@ -23,16 +23,18 @@ input {
 
 .imgContainer {
     width: 40%;
-    border: 1px solid var(--secundary);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.img{
+    background-image: url("../../public/images/upload.png");
     background-position: center center;
     background-size: cover;
-    background-color: red;
+}
+
+.imgInput {
+    width: fit-content;
+    height: 100%;
+    opacity: 0;
 }
 
 .text {
@@ -52,7 +54,11 @@ input {
     display: inline-block;
     border: 1px solid var(--acent);
     color: var(--acent);
-    
+    width: 120px;
+}
+
+.category::placeholder {
+    color: var(--acent);
 }
 
 .desc{

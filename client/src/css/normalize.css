@@ -132,8 +132,6 @@ footer ul {
     border-radius:50%;
     border:1px solid var(--acent);
     margin:0 8px;
-    color:inherit;
-    opacity:0.75;
   }
   
   footer .copyright {
@@ -145,5 +143,5 @@ footer ul {
   }
 
 footer > *, footer > .social-media > a > * {
-    color: white;
+    color: rgba(255, 255, 255, .75);
 }
