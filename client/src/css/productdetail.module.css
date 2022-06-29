@@ -21,6 +21,7 @@
     background-size: cover;
     background-color: red;
     flex: 1;
+    min-height: 500px;
 }
 
 .text {

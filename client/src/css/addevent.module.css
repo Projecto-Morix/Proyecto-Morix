@@ -2,6 +2,11 @@
     min-height: 100%;
 }
 
+input {
+    outline: none;
+    border: none;
+}
+
 .line{
     width: auto;
     height: 3px;
@@ -16,11 +21,20 @@
     padding: 20px;
 }
 
-.img{
+.imgContainer {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../public/images/upload.png");
     background-position: center center;
     background-size: cover;
-    background-color: red;
-    flex: 1;
+}
+
+.imgInput {
+    width: fit-content;
+    height: 100%;
+    opacity: 0;
 }
 
 .text {
@@ -40,11 +54,18 @@
     display: inline-block;
     border: 1px solid var(--acent);
     color: var(--acent);
+    width: 120px;
+}
+
+.category::placeholder {
+    color: var(--acent);
 }
 
 .desc{
     margin-right: 20px;
     font-size: 20px;
+    display: block;
+    width: 100%;
 }
 
 .localizaciondatos{
@@ -55,6 +76,10 @@
 
 .titleLocalizacion{
     font-size: 1.6rem;
+}
+
+.EdadMinima {
+    width: 25px;
 }
 
 
@@ -84,7 +109,7 @@
         row-gap: 10px;
     }
 
-    .img {
+    .imgContainer {
         width: 100%;
         height: clamp(400px, 50vh, 500px);
         flex: none;

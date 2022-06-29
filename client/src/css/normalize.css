@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     text-decoration: none;
     list-style: none;
     color: black;
@@ -41,9 +42,9 @@ body {
     flex-direction: column;
 }
 
-nav {
+.default-nav {
     padding: 15px;
-    background: var(--acent);
+    background: var(--secundary);
     width: 100%;
     display: flex;
     align-items: center;
@@ -56,45 +57,171 @@ nav {
     letter-spacing: .75px;
     font-size: 1.5rem;
     margin: 0 20px;
-    color: var(--secundary);
+    color: var(--acent);
 }
 
 .nav-logo:focus {
-    color: var(--secundary);
+    color: var(--acent);
 }
 
-nav > .links {
+.default-nav > .links {
     display: flex;
     justify-content: space-between;
     flex: 1;
 }
 
-nav > .links > ul > li {
+.default-nav > .links > ul > li {
     display: inline-block;
     padding: 0 20px;
 }
 
-nav > .links > ul > li > a {
+.default-nav > .links > ul > li > a {
     color: white;
+    font-weight: 500;
 }
 
-nav > .links > li {
+.default-nav > .links > li {
     display: inline-block;
     padding: 0 20px;
+}
+
+.responsive-nav {
+    display: none;
+    padding: 15px;
+    background: var(--secundary);
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.responsive-nav > .nav-menu {
+    background-color: var(--secundary);
+    border: 0;
+    float: right;
+    margin: 0 20px;
+}
+
+.responsive-nav > .nav-menu > * {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.responsive-nav > ul {
+    top: -100vh;
+    left: 0;
+    background-color: var(--secundary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    transition: all .2s linear;
+    z-index: 25;
+    top: 52px;
+    overflow: hidden;
+    transform-origin: top;
+    max-height: 0;
+}
+
+.responsive-nav > ul[class="active"] {
+    max-height: 400px;
+}
+
+.responsive-nav > ul > li {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 400;
+    margin: 1px 0;
+    transition: all .2s ease;
+}
+
+.responsive-nav > ul > li > a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    display: block;
+    padding: 20px;
+    width: 100%;
+}
+
+.responsive-nav > ul > li:hover {
+    background-color: var(--acent-dark);
+}
+
+@media (max-width: 600px) {
+    .default-nav {
+        display: none;
+    }
+
+    .responsive-nav {
+        display: block;
+    }
 }
 
 main {
     flex: 1;
 }
 
+/* Footer */
+
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: var(--secundary);
-    border-top: 1px solid rgba(255, 255,255, 0.1);
+    padding:20px 0;
+    background-color:var(--secundary);
+    color:var(--primary);
 }
 
-footer > * {
+footer ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+footer li {
+    padding:0 10px;
+    display: inline-block;
+}
+
+footer ul a {
     color: white;
+    opacity:0.8;
+}
+
+footer ul a:hover {
+    opacity:1;
+}
+
+footer .social-media {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+footer .social-media > a {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid var(--acent);
+    margin:0 8px;
+}
+
+footer .social-media > a:hover {
+    background-color: var(--acent);
+}
+
+footer .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size: 1.1rem;
+    color:var(--acent);
+    margin-bottom:0;
+}
+
+footer > *, footer > .social-media > a > * {
+    color: rgba(255, 255, 255, .75);
 }

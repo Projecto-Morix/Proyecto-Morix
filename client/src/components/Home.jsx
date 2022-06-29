@@ -1,4 +1,4 @@
-import Navbarc from './navbarc';
+import Navbarc from './Navbarc';
 import SFooter from './SFooter';
 const Home = ({Comp}) => {
  

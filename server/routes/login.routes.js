@@ -1,11 +1,10 @@
 const router = require("express").Router();
 const con = require('../database/DBCon');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
 
-const { Email, password } = req.body;
+    const {username, password} = req.body;
 
     if (!Email || !password) {      
         res.status(400).send({ auth: false, err: 'Credenciales incompletas' });

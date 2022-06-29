@@ -23,7 +23,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/SignIn" element={<Register/>} />
-        <Route path="/" element={<IndexP/>}/>
+        <Route path="/" element={<Home Comp={IndexP}/>}/>
         <Route path="/Login" element={<Login/>} />
         <Route path="/catalog" element={<Home Comp={Catalog}/>} />
         <Route path="/catalog/:Id" element={<Home Comp={Details}/>} />
