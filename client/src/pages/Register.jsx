@@ -1,7 +1,7 @@
 import RegisterCSS from './../css/register.module.css';
 import { Axios } from '../backend';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 function Register() {
   const [Nombre, SetNombre] = useState(() => { return '' });
   const [Apellido, SetApellido] = useState(() => { return '' });
@@ -76,6 +76,7 @@ function Register() {
                 Register();
               }} value='Register' />
               <p style={Guide.style}>{Guide.msg}</p>
+              <div className={RegisterCSS.headerSubtitle}><Link to='/signin'>Registrarse</Link></div>
             </form>
           </div>
         </div>

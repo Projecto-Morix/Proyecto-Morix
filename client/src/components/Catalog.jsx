@@ -9,10 +9,8 @@ function Catalog({ Id, Title }) {
   useEffect(() => {
     async function fetchData() {
       const site = Id===0? '/catalog/' : '/catalog/patron/' + Id;
-      console.log(site);
       const req = await Axios.get(Server + site);
       SetProducts(req.data);
-     // return req.data;
     }
     fetchData();
   }, [Id]);
