@@ -3,16 +3,67 @@
 }
 
 .welcome {
-    background-color: red;
-    height: calc(100vh - 58px);
+    background-color: white;
+    height: 60vw;
+    max-height: 75vh;
+    display: flex;
+    padding: 0 40px;
+}
+
+.welcomeText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcomeTitle {
+    font-size: clamp(1.5rem, 8vw, 10rem);
+    color: var(--secundary);
+    margin-bottom: 10px;
+}
+
+.welcomeText > p {
+    color: var(--secundary);
+    font-size: clamp(1rem, 1.7vw, 1.8rem);
+}
+
+.welcomeImg {
+    flex: 1;
+    background-image: url("../../public/images/tickets.png");
+    background-position: center center;
+    background-size: cover;
 }
 
 .aboutUs {
-    height: 75vh;
-    background-color: green;
+    height: clamp(50vh, 65vw, 75vh);
+    background-color: var(--secundary);
 }
 
 .contactUs {
-    height: 75vh;
-    background-color: blue;
+    height: clamp(50vh, 65vw, 75vh);
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .welcome {
+        flex-direction: column;
+        padding: 20px 40px;
+        row-gap: 20px;
+        height: auto;
+    }
+
+    .welcomeText {
+        width: 100%;
+    }
+
+    .welcomeText > * {
+        text-align: center;
+    }
+
+    .welcomeImg {
+        flex: none;
+        height: 50vh;
+        width: 100%;
+    }
 }
